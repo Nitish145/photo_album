@@ -11,7 +11,9 @@
   src: local("Ubuntu-Italic"),
        url(Ubuntu-Italic.ttf);
 }
-
+.nav{
+    background-color:black
+}
 /* Tag overrrides */
 body, h1, h2, h3, h4, h5{
     font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
