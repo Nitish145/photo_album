@@ -1,8 +1,23 @@
-/*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
-/*
-	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
-*/
-/* pswp = photoswipe */
+.image_container{
+  width: 90%; 
+  margin-left:5%;
+   margin-right:5%;
+   margin-bottom: 55px;
+}
+.header{
+  margin-left: 9%;
+    width: 82%;
+}
+p{
+  width: 90%;
+    margin: 0;
+    margin-left: 4.5%;
+    font-size: 16px;
+}
+h1{
+  text-transform: uppercase;
+  font-size: 30px;
+}
 .pswp {
   display: none;
   position: absolute;
@@ -37,27 +52,24 @@
   display: block; }
 
 .pswp--zoom-allowed .pswp__img {
-  /* autoprefixer: off */
+
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
   cursor: zoom-in; }
 
 .pswp--zoomed-in .pswp__img {
-  /* autoprefixer: off */
+
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab; }
 
 .pswp--dragging .pswp__img {
-  /* autoprefixer: off */
+
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   cursor: grabbing; }
 
-/*
-	Background is added as a separate element.
-	As animating opacity is much faster than animating rgba() background-color.
-*/
+
 .pswp__bg {
   position: absolute;
   left: 0;

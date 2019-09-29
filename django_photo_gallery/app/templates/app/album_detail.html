@@ -10,13 +10,13 @@
 
     {% if album.is_visible %}
         <article class="row">
-            <header class="col s12 m12 l10 offset-l1">
+            <header class="header">
                 <h1>{{ album.title }}</h1>
             </header>
-            <section class="col s12 m12 l10 offset-l1">
+            <section class="image_container" >
                 <p>{{ album.description }}</p>
 
-                <div class="container">
+                <div class="container" style="width:100%">
                     <div class="row">
                         {% for item in images %}
                         <a class="class="col s12 m3" href="javascript:pswpInit({{ forloop.counter0 }});">
@@ -30,7 +30,7 @@
             </section>
             <footer class="col s12 m12 l10 offset-l1">
                 Created on <time datetime="{{ album.created|date:"Y-m-d" }}">{{ album.created|date:"d M Y" }}</time>
-                <p>Tags: {{ album.tags }}</p>
+                <h6>Tags: {{ album.tags }}</h6>
             </footer>
         </article>
 

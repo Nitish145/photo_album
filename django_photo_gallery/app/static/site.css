@@ -12,59 +12,41 @@
        url(Ubuntu-Italic.ttf);
 }
 .nav{
-    background-color:black
+    /* background-color:black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-/* Tag overrrides */
-body, h1, h2, h3, h4, h5{
-    font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.icon_image{
+    width: 60px;
+    margin-right: 25px;
 }
-
-h1{
-    font-size: 3.0rem;
+.social_div, .menu{
+    display: flex;
+    width: fit-content;
+    align-items: center;
 }
-
-h2{
-    font-size: 2.0rem;color:#37474f;
-    margin-bottom: 0px;
+.menu_content{
+    padding-right: 25px;
+    border-right: 1px solid blue;
+    padding-left: 25px;
 }
-
-h3{
-    font-size: 1.5rem;
+.menu_content_contact{
+    padding-right: 25px;
+    padding-left: 25px;
 }
-
-strong {
-    font-size: 1.1em;
-    color: darkblue;
+.container{
+    width: 90%;
+    margin: 0;
+    max-width: 100vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 65px;
 }
-
-/* Materializecss overrrides */
-.carousel-slider {
-    height: 400px !important;
-}
-
-/* Custom styles overrrides */
-.dpg-opaque {
-  /* Theoretically for IE 8 & 9 (more valid) */
-  /* ...but not required as filter works too */
-  /* should come BEFORE filter */
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-
-  /* This works in IE 8 & 9 too */
-  /* ... but also 5, 6, 7 */
-  filter: alpha(opacity=60);
-  
-  /* Modern Browsers */
-  opacity: 0.6;
-}
-
-.dpg-italic {
-  font-style: italic;
-}
-
-.dpg-icon {
-    max-width:4rem;
-    max-height:4rem;
-}
+/* .row{
+    margin-left: 5%;
+    margin-right: 5%;
+} */
 
 .dpg-album-card-image {
     width:300px;
@@ -73,4 +55,9 @@ strong {
 
 .dpg-album-card, .dpg-album-image {
     max-width:300px;
+}
+@media screen and (max-width:768px){
+    .menu{
+        display: none;
+    }
 }

@@ -9,53 +9,25 @@
 </head>
 
 <body>
-    <!-- <nav class="nav">
-        <div class="nav">
-            <a id="logo-container" href="#" class="brand-logo">kassu</a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="#">ALBUM</a>
-                </li>
-            </ul>
-
-            <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
-                <li>
-                    <a href="#">Navbar</a>
-                </li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
+    <div class="nav">
+        <div class="social_div">
+            <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon-01.png'%}" class="icon_image"/></a></div>
+            <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/instaicon-01.png'%}" class="icon_image"/></a></div>
+            <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/incon1-01.png'%}" class="icon_image"/></a></div>
         </div>
-    </nav> -->
+        <div class="menu">
+            <div class="menu_content"><a href="/">HOME</a></div>
+            <div class="menu_content"><a href="#">ABOUT</a></div>
+            <div class="menu_content"><a href="#">BLOG</a></div>
+            <div class="menu_content_contact"><a href="#">CONTACT</a></div>
+        </div>
+    </div>
+
+    
 
     {% block content %}{% endblock %}
 
-    <!-- <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <a href="https://www.facebook.com/anand.kasaudhan" target="_blank">
-                        <img src="{% static 'social/social-facebook.svg' %}" class="dpg-icon" alt="Django Photo Gallery RSS Feed" />
-                    </a>
-                    <a href="https://github.com/anandkassu" target="_blank">
-                        <img src="{% static 'social/social-github.svg' %}" class="dpg-icon" alt="Django Photo Gallery Github" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="_blank">
-                        <img src="{% static 'social/social-linkedin.svg' %}" class="dpg-icon" alt="Django Photo Gallery Linkedin" />
-                    </a>
-                     <a href="https://twitter.com/velingeorgiev" target="_blank">
-                        <img src="{% static 'social/social-twitter.svg' %}" class="dpg-icon" alt="Django Photo Gallery Twitter" />
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <a class="grey-text text-lighten-4 right" href="#!">made by @anandkassu</a>
-            </div>
-        </div>
-    </footer> -->
+    
 
     <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->
