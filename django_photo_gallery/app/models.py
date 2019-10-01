@@ -29,5 +29,8 @@ class AlbumImage(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     width = models.IntegerField(default=0)
     height = models.IntegerField(default=0)
-    # caption = models.TextField(max_length=200, default=uuid.uuid4)
+    caption = models.TextField(max_length=200)
     slug = models.SlugField(max_length=70, default=uuid.uuid4, editable=False)
+
+
+   

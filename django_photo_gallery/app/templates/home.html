@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load staticfiles %} {% include 'material/includes/material_css.html' %}
-    <link rel="stylesheet" href="{% static 'home.css' %}" type="text/css" /> {% block css %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">{% load staticfiles %}{% include 'material/includes/material_css.html' %}
+    <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css" />
+    <title>home</title>
+
 </head>
-
 <body>
-    <!-- <a href="gallery">kassu</a> -->
-    <div class="nav">
-        <div>
-            <p>KASSU</p>
-        </div>
-        <div class="header">
-            <div class="header_content"><p>about</p></div>
-            <div><a href="gallery">album</a></div>
-            <div><p>contact</p></div>
-
-        </div>
-
-    </div>
-
+    
+        <div style="width:100vw; height:100vh">
+            <div class="nav">
+                <div class="menu">
+                    <!-- <div class="menu_content" ><a href="/home" >HOME</a></div> -->
+                    <div class="menu_content"><a href="gallery">ALBUM</a></div>
+                    <div class="menu_content"><a href="#">ABOUT</a></div>
+                    <div class="menu_content"><a href="#">BLOG</a></div>
+                    <div class="menu_content"><a href="#">CONTACT</a></div>
+                </div>
+            </div>
         
-
+            <div class="mobile_nav" onclick="sidebar()">
+                <div class="bar1"></div>
+                <div class="bar1"></div>
+                <div class="bar1"></div>
+            </div>
+            <div id="sidebar"> 
+                <div id="cancle" onclick="close()">X</div>
+                <div class="sidebarContent">
+                <div class="sidebar_content">HOME</div>
+                <div class="sidebar_content">ALBUM</div>
+                <div class="sidebar_content">ABOUT</div>
+                <div class="sidebar_content">BLOG</div>
+                <div class="sidebar_content">CONTACT</div>
+                </div>
+        
+            </div>
+            <a href="home"><img src="{%static 'images/right arrow.png' %}"/></a>
+        </div>
+            
+       
 </body>
-
 </html>
+<script>
+        function sidebar(){
+            document.getElementById("sidebar").style.transform='translate(0)';
+        };
+        function close(){
+            document.getElementById("sidebar").style.transform= "translate(-100%)";
+        };
+        
+        
+    </script>

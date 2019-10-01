@@ -1,63 +1,226 @@
-﻿/* Custom fonts */
-@font-face {
-  font-family: Ubuntu;
-  src: local("Ubuntu"),
-       local("Ubuntu-Regular"),
-       url(Ubuntu-Regular.ttf);
+﻿@font-face{
+    font-family: GOOD BRUSH;
+    src: url(../static//GoodBrush.woff);
 }
+body{
+    background-color: #021300;
+}
+.overlay {
+    width: 100%;
+      height:98%;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      background-color: #071829;
+      /* box-shadow: 5px -5px 10px 10px #071829; */
+      transform: translateX(-50%);
+      opacity: .5;
+      overflow: hidden;
+      transition: .5s ease;  
+      
+  }
+  .email{
+    font-size: 16px;
+    font-family: sans-serif;
+   
+    
+   
+    text-align: right;
 
-@font-face {
-  font-family: Ubuntu-Italic;
-  src: local("Ubuntu-Italic"),
-       url(Ubuntu-Italic.ttf);
-}
+    letter-spacing: 4px;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
 .nav{
     /* background-color:black; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+    padding: 30px
 }
 .icon_image{
-    width: 60px;
+    width: 35px;
     margin-right: 25px;
+    opacity: 0.5;
 }
-.social_div, .menu{
+.menu{
     display: flex;
-    width: fit-content;
-    align-items: center;
 }
+.social_div{
+    display: flex;
+    align-items: end;
+    width: 95vw;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.social_icon_div{
+    display: flex;
+    width: 95vw;
+    justify-content: flex-end;
+}
+.email_div{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    width: 95vw;
+    justify-content: flex-end;
+}
+
+
+a{
+    font-size: 17px;
+    color: #FFFFFF;
+    /* opacity: 0.7; */
+}
+.menu_content:hover{opacity: 1;}
+.icon_image:hover{opacity: 1;}
+.email:hover{opacity: 1;}
+a:visited{border-bottom: 1px solid white}
 .menu_content{
-    padding-right: 25px;
-    border-right: 1px solid blue;
-    padding-left: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
+    opacity: 0.5;
 }
-.menu_content_contact{
-    padding-right: 25px;
-    padding-left: 25px;
-}
-.container{
+#album_container{
     width: 90%;
     margin: 0;
     max-width: 100vw;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 65px;
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-/* .row{
-    margin-left: 5%;
-    margin-right: 5%;
-} */
-
-.dpg-album-card-image {
-    width:300px;
-    height:225px;
+.card_content{
+    font-size: 25px;
+    font-family: GOOD BRUSH;
+    opacity: 0.5;
+    color: white
 }
 
-.dpg-album-card, .dpg-album-image {
-    max-width:300px;
+.album_card{
+    /* max-height: 300px; */
+    margin-right: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+
+}
+.album_image{
+    max-height: 300px;
+    transition: .5s
+}
+.album_card:hover .card_content{opacity: 1;}
+.album_card:hover .album_image{
+    max-height: 350px;
+    transition: .5s}
+
+.mobile_nav{display: none}
+/* #sidebar{display: none} */
+#cancle{display: none}
+.sidebar_content{display: none}
+.image_div{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;}
+.images{
+    max-height: 300px;
+}
+.content{
+    width: 300px;
+    position: absolute;
+    top: 25%;
+    right: 10%;
+}
+.caption{
+    font-size: 20px;
+    font-family: serif;
+    color: black;
+}
+.scrollmenu{
+    overflow: auto;
+  white-space: nowrap;
 }
 @media screen and (max-width:768px){
-    .menu{
+    .nav{
         display: none;
     }
+    .mobile_nav{
+        width: 50px;
+        height: 39px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px;
+        z-index: 15;
+        }
+   .bar1{
+    width: 37px;
+    height: 6px;
+    border-radius: 100px;
+    background-color: black;
+   }
+   .header{
+       margin-top: 20%
+   }
+   #sidebar{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    left: 0%;
+    /* display: none; */
+    transition: transform 0.5s;
+    transform: translate(-100%);
+    
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-content: center;
+    /* padding: 50px; */
+    
+   }
+   #album_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 60px;
+   }
+   .album_card{
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   #cancle{
+       font-size: 40px;
+       color: white;
+       position: absolute;
+    right: 34px;
+    top: 10px;
+    z-index: 500;
+    /* display: none; */
+   }
+   .sidebar_content{
+       color: white;
+       font-size: 20px;
+       /* display: none */
+   }
+   .sidebarContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
 }

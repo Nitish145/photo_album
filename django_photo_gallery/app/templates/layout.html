@@ -10,22 +10,42 @@
 
 <body>
     <div class="nav">
-        <div class="social_div">
-            <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon-01.png'%}" class="icon_image"/></a></div>
-            <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/instaicon-01.png'%}" class="icon_image"/></a></div>
-            <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/incon1-01.png'%}" class="icon_image"/></a></div>
-        </div>
+        
         <div class="menu">
-            <div class="menu_content"><a href="/">HOME</a></div>
+            <!-- <div class="menu_content" ><a href="/home" >HOME</a></div> -->
+            <div class="menu_content"><a href="gallery">ALBUM</a></div>
             <div class="menu_content"><a href="#">ABOUT</a></div>
             <div class="menu_content"><a href="#">BLOG</a></div>
-            <div class="menu_content_contact"><a href="#">CONTACT</a></div>
+            <div class="menu_content"><a href="#">CONTACT</a></div>
         </div>
     </div>
+
+    <div class="mobile_nav" onclick="sidebar()">
+        <div class="bar1"></div>
+        <div class="bar1"></div>
+        <div class="bar1"></div>
+    </div>
+    <div id="sidebar"> 
+        <div id="cancle" onclick="close()">X</div>
+        <div class="sidebarContent">
+        <div class="sidebar_content">HOME</div>
+        <div class="sidebar_content">ALBUM</div>
+        <div class="sidebar_content">ABOUT</div>
+        <div class="sidebar_content">BLOG</div>
+        <div class="sidebar_content">CONTACT</div>
+        </div>
+
+    </div>
+
+
+
+
 
     
 
     {% block content %}{% endblock %}
+
+
 
     
 
@@ -36,3 +56,14 @@
 </body>
 
 </html>
+
+<script>
+    function sidebar(){
+        document.getElementById("sidebar").style.transform='translate(0)';
+    };
+    function close(){
+        document.getElementById("sidebar").style.transform= "translate(-100%)";
+    };
+    
+    
+</script>

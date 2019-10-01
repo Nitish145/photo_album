@@ -7,9 +7,11 @@ from django.views.generic import DetailView
 
 from app.models import Album, AlbumImage
 
-# def home (request):
-#     return render(request,'home.html')
-    
+def home (request):
+    return render(request,'home.html')
+
+
+
 def gallery(request):
     list = Album.objects.filter(is_visible=True).order_by('-created')
     paginator = Paginator(list, 10)

@@ -26,3 +26,5 @@ var pswpInit = function (startsAtIndex) {
         gallery.init();
     }
 }
+
+    

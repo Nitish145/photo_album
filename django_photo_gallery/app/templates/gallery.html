@@ -4,30 +4,24 @@
 {% block content %}
 
 
-<div class="container">
-    <div class="row">
+<div id="album_container">
+    
+    
         {% for album in albums %}
 
-        <div class="col">
-            <div class="card dpg-album-card">
-                <a href="{% url 'album' album.slug %}" class="card-image" >
-                    <img href="{% url 'album' album.slug %}" src="{{ album.thumb.url }}" alt="{{ album.title }}" class="dpg-album-card-image" style="height:100%"/>
+      
+            <div class="album_card">
+                <a href="{% url 'album' album.slug %}">
+                    <img href="{% url 'album' album.slug %}" src="{{ album.thumb.url }}" alt="{{ album.title }}" class="album_image"/>
                 </a>
-                <div class="card-content">
-                    <span class="card-title">{{ album.title }}</span>
-                    <!-- <p>{{ album.description|truncatechars:120 }}</p> -->
-                </div>
-                <!-- <div class="card-action">
-                    <a href="{% url 'album' album.slug %}">
-                        More Images
-                    </a>
-                </div> -->
-            </div>
+                <div class="card_content">{{ album.title }}</div>
+                
+            
         </div>
 
         {% endfor %}
 
-    </div>
+  
 </div>
 
 <div class="pagination center">
@@ -41,5 +35,6 @@
         {% endif %}
     </span>
 </div>
+
 
 {% endblock %}

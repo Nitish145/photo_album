@@ -4,35 +4,61 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'external/photoswipe/photoswipe.css' %}"> 
     <link rel="stylesheet" href="{% static 'external/photoswipe/default-skin/default-skin.css' %}"> 
+    
 {% endblock %}
 
 {% block content %}
 
+
     {% if album.is_visible %}
-        <article class="row">
+
+        
+
+
+
+
+
+
+
             <header class="header">
                 <h1>{{ album.title }}</h1>
             </header>
-            <section class="image_container" >
-                <p>{{ album.description }}</p>
+            <p>{{ album.description }}</p>
+            
+                
 
-                <div class="container" style="width:100%">
-                    <div class="row">
+                
+                    <div class="row" style="">
                         {% for item in images %}
-                        <a class="class="col s12 m3" href="javascript:pswpInit({{ forloop.counter0 }});">
-                            <img src="{{ item.thumb.url }}" class="responsive-img dpg-album-image" alt="{{ item.alt }}" />
+                    <div style="position: relative" class="image_card">    
+                        <a href="javascript:pswpInit({{ forloop.counter0 }});">
+                            <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}" class="images" />
                         </a>
-                        <!-- <p>{{album</p> -->
+                        <!-- <div class="overlay">
+                            <div>{{item.caption}}</div>
+                        </div> -->
+                    </div>
                         {% endfor %}
                     </div>
-                </div>
+            <div class="social_div">
+                <div class="social_icon_div">
+            <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon.png'%}" class="icon_image"/></a></div>
+            <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/igicon.png'%}" class="icon_image"/></a></div>
+            <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/inicon.png'%}" class="icon_image" style="margin-right: 0"/></a></div>
+            </div>
+        <div class="email_div"><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqjCJVMRVmnFTQZSmjQhzgXxNZcrgLLfLHRSwtFvsfqRvLfVJslWchMXrRKTTgzsfDRfZL" target="new"><p class="email">prabhavbenara@gmail.com</p></a> </div>
+        </div>
+            
+            
 
-            </section>
-            <footer class="col s12 m12 l10 offset-l1">
+          
+            <!-- <footer class="date">
                 Created on <time datetime="{{ album.created|date:"Y-m-d" }}">{{ album.created|date:"d M Y" }}</time>
                 <h6>Tags: {{ album.tags }}</h6>
-            </footer>
-        </article>
+            </footer> -->
+            
+            
+      
 
         <!-- PhotoSwipe -->
         <!-- Root element of PhotoSwipe. Must have class pswp. -->
@@ -102,7 +128,22 @@
 
         </div>
     {% else %}
-        <h3>This album is temporarily unavailable.</h3>
+                
+                     <div class="scrollmenu" style="width:90%; margin-left:5%;">
+                        {% for item in images %}
+                        <div style="position: relative" >    
+                              
+                                    <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}"/>
+                                
+                            </div>
+                        {% endfor %}
+                    </div> 
+                     
+                  
+
+
+
+       
     {% endif %}
 
 {% endblock %}
@@ -122,4 +163,11 @@
     </script>
     <script src="{% static 'external/photoswipe/photoswipe.min.js' %}"></script> 
     <script src="{% static 'external/photoswipe/photoswipe-ui-default.min.js' %}"></script>
+    
 {% endblock %}
+
+<style>
+       
+        
+       
+        </style>

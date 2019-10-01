@@ -1,23 +1,65 @@
-.image_container{
-  width: 90%; 
-  margin-left:5%;
-   margin-right:5%;
-   margin-bottom: 55px;
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  margin:5%;
+  justify-content: center;
 }
+
 .header{
-  margin-left: 9%;
-    width: 82%;
+  margin-left: 5%;
+    width: 90%;
+    color: white;
+    opacity: .7
 }
 p{
-  width: 90%;
+  width: 82%;
     margin: 0;
-    margin-left: 4.5%;
-    font-size: 16px;
+    margin-left: 5%;
+    font-size: 18px;
+    font-family: monospace;
+    color: white;
+    opacity: 0.7
 }
 h1{
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 34px;
+  font-family: monospace;
 }
+.overlay {
+  width: 100%;
+    height:0%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    background-color: #071829;
+    /* box-shadow: 5px -5px 10px 10px #071829; */
+    transform: translateX(-50%);
+    opacity: .5;
+    overflow: hidden;
+    transition: .5s ease;  
+    
+}
+.date{
+  margin-left: 5%;
+    font-size: 15px;
+}
+.image_card{
+  /* max-height: 300px; */
+  margin-right: 4px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+.image:hover .overlay{
+ height: 98%;
+}
+
+
 .pswp {
   display: none;
   position: absolute;
@@ -189,3 +231,20 @@ h1{
 .pswp__error-msg a {
   color: #CCC;
   text-decoration: underline; }
+  @media screen and (max-width:768px){
+    .nav{
+      display: none;
+    }
+    h1{
+        font-size: 20px;
+    }
+    p{font-size: 12px;
+    margin-right: 5%}
+    body{width: 100vw;}
+    .row{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+   .al
+}
