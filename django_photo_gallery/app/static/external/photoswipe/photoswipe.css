@@ -246,5 +246,46 @@ h1{
       display: flex;
       flex-direction: column;
     }
-   .al
+   
+}
+
+#main {
+  width: 640px;
+  margin: 10px auto;
+  font-family: 'Coda', cursive;
+}
+
+p{ text-align: center; }
+
+#loading img {
+  display: block;
+  margin: 10px auto;
+}
+
+#slides {
+  display: none;
+}
+
+.toggle {
+  display: none;
+}
+
+.active {
+  display: block;
+  animation: fadein ease-in 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+  background: #333;
+  color: #fff;
 }

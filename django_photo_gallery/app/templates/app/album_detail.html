@@ -128,18 +128,23 @@
 
         </div>
     {% else %}
-                
-                     <div class="scrollmenu" style="width:90%; margin-left:5%;">
+                    <img src="{%static 'images/right arrow.png' %}" style="position: absolute;top:50%;right:0"/>
+                     <div class="scrollmenu" style="width:90%; margin-left:5%;margin-top: 2%">
                         {% for item in images %}
-                        <div style="position: relative" >    
-                              
-                                    <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}"/>
-                                
+                        <div style="display: flex; flex-direction:row;width: 90vw;justify-content: space-around; margin-bottom: 4%; align-items: center;">    
+                              <div>
+                                    <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}" height="800px"/>
+                                </div>
+                                <div style="width: 260px;">
+                                    <h1 style="color: white;
+                                    opacity: 0.5;
+                                    font-size: 20px;
+                                    font-style: oblique;">{{item.caption}}</h1>
+                                </div>
                             </div>
                         {% endfor %}
                     </div> 
-                     
-                  
+                   
 
 
 
@@ -165,9 +170,3 @@
     <script src="{% static 'external/photoswipe/photoswipe-ui-default.min.js' %}"></script>
     
 {% endblock %}
-
-<style>
-       
-        
-       
-        </style>
