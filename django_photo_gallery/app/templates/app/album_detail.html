@@ -4,6 +4,7 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'external/photoswipe/photoswipe.css' %}"> 
     <link rel="stylesheet" href="{% static 'external/photoswipe/default-skin/default-skin.css' %}"> 
+   
     
 {% endblock %}
 
@@ -23,7 +24,7 @@
             <header class="header">
                 <h1>{{ album.title }}</h1>
             </header>
-            <p>{{ album.description }}</p>
+            <p style="text-align: initialse">{{ album.description }}</p>
             
                 
 
@@ -128,22 +129,47 @@
 
         </div>
     {% else %}
-                    <img src="{%static 'images/right arrow.png' %}" style="position: absolute;top:50%;right:0"/>
-                     <div class="scrollmenu" style="width:90%; margin-left:5%;margin-top: 2%">
+                   
+
+
+                    <div class="slideshow-container" style="height: 85vh">
+
                         {% for item in images %}
-                        <div style="display: flex; flex-direction:row;width: 90vw;justify-content: space-around; margin-bottom: 4%; align-items: center;">    
-                              <div>
-                                    <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}" height="800px"/>
-                                </div>
-                                <div style="width: 260px;">
-                                    <h1 style="color: white;
-                                    opacity: 0.5;
-                                    font-size: 20px;
-                                    font-style: oblique;">{{item.caption}}</h1>
-                                </div>
-                            </div>
+                        <div class="mySlides fade" style="height: 100%">
+                          
+                          <div style="display: flex; flex-direction:row ;justify-content: space-around; align-items: center;height: 100%;">    
+                                <div>
+                                      <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}" height="600px"/>
+                                  </div>
+                                  <div style="width: 260px;">
+                                      <h2 style="color: white;
+                                      opacity: 0.5;
+                                      font-size: 20px;
+                                      font-style: oblique;">{{item.caption}}</h2>
+                                  </div>
+                              </div>
+                        </div>
                         {% endfor %}
-                    </div> 
+                        
+                        
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        
+                        </div>
+                        <br>
+                        
+                        <!-- <div style="text-align:center; display:flex;justify-content: center; ">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                          <span class="dot" onclick="currentSlide(4)"></span> 
+                          <span class="dot" onclick="currentSlide(5)"></span> 
+                        </div>
+                         -->
+   
+
+   
+   
                    
 
 
@@ -168,5 +194,8 @@
     </script>
     <script src="{% static 'external/photoswipe/photoswipe.min.js' %}"></script> 
     <script src="{% static 'external/photoswipe/photoswipe-ui-default.min.js' %}"></script>
-    
-{% endblock %}
+
+   {%endblock %}
+
+   
+        

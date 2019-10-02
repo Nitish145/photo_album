@@ -9,7 +9,7 @@
 
 </head>
 <body>
-        <a href="home"><img src="{%static 'images/right arrow.png' %}" style="position: absolute;top:50%;right:0"/></a>
+        <!-- <a href="home" style="position: absolute;top:50%;right:0" class="next">&#10095;</a> -->
         <div style="width:100vw; height:100vh">
             <div class="nav">
                 <div class="menu">
@@ -39,11 +39,11 @@
             </div>
            
 
-            <div class="scrollmenu" style="width: 90%; margin-left:5%;margin-top: 2%">
+            <div class="scrollmenu" style="width: 90%;height: 85vh; margin-left:5%;">
                    
-                    <div style="display: flex; flex-direction:row;width: 90vw;justify-content: space-around; align-items: center">    
+                    <div style="display: flex; flex-direction:row;width: 90vw;height:100%;justify-content: space-around; align-items: center">    
                           <div>
-                                <img src="../../media/albums/animal-photography-animals-blurred-background-1431465.jpg"   height="800px"/>
+                                <img src="../../media/albums/animal-photography-animals-blurred-background-1431465.jpg"   max-height="600px"/>
                             </div>
                             <div style="width: 260px;">
                                 <h1 style="color: white;
@@ -52,7 +52,9 @@
                                 font-style: oblique;">“A great photograph is one that fully expresses what one feels, in the deepest sense, about what is being photographed.”
 ― Ansel Adams</h1>
                             </div>
+                            <a class="next" href="home" style="position:absolute;right:5%; top:51.5%">&#10095;</a>
                         </div>
+                        
                   
                 </div> 
         </div>
