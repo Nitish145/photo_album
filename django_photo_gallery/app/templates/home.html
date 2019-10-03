@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">{% load staticfiles %}{% include 'material/includes/material_css.html' %}
     <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css" />
+    
     <title>home</title>
 
 </head>
 <body>
         <!-- <a href="home" style="position: absolute;top:50%;right:0" class="next">&#10095;</a> -->
         <div style="width:100vw; height:100vh">
-            <div class="nav">
+            <div class="nav" style="justify-content: space-between">
+                <div class="photographer"><a href="/"><h3>PRABHAV BENARA</h3></a></div>
                 <div class="menu">
-                    <!-- <div class="menu_content" ><a href="/home" >HOME</a></div> -->
-                    <div class="menu_content"><a href="gallery">ALBUM</a></div>
-                    <div class="menu_content"><a href="#">ABOUT</a></div>
-                    <div class="menu_content"><a href="#">BLOG</a></div>
-                    <div class="menu_content"><a href="#">CONTACT</a></div>
+                    <div class="menu_content" ><a href="/home" >home</a></div>
+                    <div class="menu_content"><a href="gallery">album</a></div>
+                    <div class="menu_content"><a href="#">about</a></div>
+                    <!-- <div class="menu_content"><a href="#">BLOG</a></div> -->
+                    <!-- <div class="menu_content"><a href="#">CONTACT</a></div> -->
                 </div>
             </div>
         
@@ -43,20 +45,37 @@
                    
                     <div style="display: flex; flex-direction:row;width: 90vw;height:100%;justify-content: space-around; align-items: center">    
                           <div>
-                                <img src="../../media/albums/animal-photography-animals-blurred-background-1431465.jpg"   max-height="600px"/>
+                                <img src="../../media/albums/animal-photography-animals-blurred-background-1431465.jpg"   height="600px"/>
                             </div>
-                            <div style="width: 260px;">
-                                <h1 style="color: white;
-                                opacity: 0.5;
-                                font-size: 20px;
-                                font-style: oblique;">“A great photograph is one that fully expresses what one feels, in the deepest sense, about what is being photographed.”
-― Ansel Adams</h1>
-                            </div>
-                            <a class="next" href="home" style="position:absolute;right:5%; top:51.5%">&#10095;</a>
+                            <div class="content_div">
+                                    <div class="comment_section">
+                                        <div class="comment"><h2 style="font-style: italic">" a good 1 minute before releasing he's photogenic and continues to search for food "</h2></div>
+                                        <div class="commenter"><h2 style="font-style: italic">-VSCO</h2></div>
+                                    </div>
+                                       <div class="name_caption">
+                                           <div class="name"><h2 style="font-weight: bold;opacity: 0.7;">Stuck In space time</h2></div> 
+                                            <div class="place_date">  
+                                           <div class="place"><h2 style="opacity: 0.7">Madagascar, Africa</h2></div>  
+                                           <div><h2 style="opacity: 0.7">|</h2></div> 
+                                           <div class="content_date"><h2 style="opacity: 0.7">October</h2></div>   
+                                            </div>
+                                            <div><h2>It was a moment pure silence in the midst of forrest this guy studies me for a good 1 minute before releasing he's photogenic and continues to search for food.</h2></div>
+                                    </div>
+    
+                                </div>
+                            <a class="next" href="home" style="position:absolute;right:5%; top:51.3%">&#10095;</a>
                         </div>
                         
                   
                 </div> 
+                <div class="social_div" style="position: absolute;bottom:0">
+                        <div class="social_icon_div">
+                    <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon.png'%}" class="icon_image"/></a></div>
+                    <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/igicon.png'%}" class="icon_image"/></a></div>
+                    <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/inicon.png'%}" class="icon_image" style="margin-right: 0"/></a></div>
+                    </div>
+                <div class="email_div"><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqjCJVMRVmnFTQZSmjQhzgXxNZcrgLLfLHRSwtFvsfqRvLfVJslWchMXrRKTTgzsfDRfZL" target="new"><p class="email">prabhavbenara@gmail.com</p></a> </div>
+                </div>
         </div>
             
        

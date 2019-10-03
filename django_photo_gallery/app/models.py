@@ -25,11 +25,16 @@ class AlbumImage(models.Model):
     image = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(1280)], format='JPEG', options={'quality': 70})
     thumb = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 80})
     album = models.ForeignKey('album', on_delete=models.PROTECT)
-    alt = models.CharField(max_length=255, default=uuid.uuid4)
+    alt = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
     width = models.IntegerField(default=0)
     height = models.IntegerField(default=0)
-    caption = models.TextField(max_length=200)
+
+    caption = models.TextField(max_length=250, blank=True)
+    commenter = models.TextField(max_length=100,blank=True)
+    comment = models.TextField(max_length=250 ,blank=True)
+    place = models.TextField(max_length=200, blank=True)
+    date = models.TextField(max_length=50,blank=True)
     slug = models.SlugField(max_length=70, default=uuid.uuid4, editable=False)
 
 

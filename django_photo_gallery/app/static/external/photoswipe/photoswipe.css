@@ -7,7 +7,13 @@
   margin:5%;
   justify-content: center;
 }
-
+h2{
+  opacity: 0.5;
+  color: white;
+  font:20px/27px Open Sans;
+letter-spacing: 4px;
+margin: 0
+}
 .header{
   margin-left: 5%;
     width: 90%;
@@ -22,11 +28,31 @@ p{
     font-family: monospace;
     color: white;
     opacity: 0.7
+    
 }
 h1{
   text-transform: uppercase;
   font-size: 34px;
   font-family: monospace;
+}
+.social_div{
+  display: flex;
+  align-items: end;
+  width: 95vw;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.social_icon_div{
+  display: flex;
+  width: 95vw;
+  justify-content: flex-end;
+}
+.email_div{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+  width: 95vw;
+  justify-content: flex-end;
 }
 .overlay {
   width: 100%;
@@ -58,7 +84,20 @@ h1{
 .image:hover .overlay{
  height: 98%;
 }
+.content_div{
+  width: 388px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  justify-content: space-evenly;}
+.comment{width: 278px;margin-left: 110px}
+.commenter{width: 278px; margin-left: 140px}
 
+.place_date{display: flex;
+justify-content: space-between;
+width: 100%;
+margin-bottom: 18.5px;}
 
 .pswp {
   display: none;
