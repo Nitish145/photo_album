@@ -20,31 +20,23 @@
         </div>
     </div>
 
-    <div class="mobile_nav" onclick="sidebar()">
-        <div class="bar1"></div>
-        <div class="bar1"></div>
-        <div class="bar1"></div>
-    </div>
-    <div id="sidebar"> 
-        <div id="cancle" onclick="close()">X</div>
-        <div class="sidebarContent">
-        <div class="sidebar_content">HOME</div>
-        <div class="sidebar_content">ALBUM</div>
-        <div class="sidebar_content">ABOUT</div>
-        <div class="sidebar_content">BLOG</div>
-        <div class="sidebar_content">CONTACT</div>
+    <div id="container">
+        <div id="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-
+        <div id="lgMenu">
+          <span id="exit">&times;</span>
+            <ul>
+              <a href="home"><li>home</li></a>
+              <a href="gallery"><li>album</li></a>
+              <li>about</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- <div class="social_div" style="position: absolute;;bottom:0">
-        <div class="social_icon_div">
-    <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon.png'%}" class="icon_image"/></a></div>
-    <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/igicon.png'%}" class="icon_image"/></a></div>
-    <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/inicon.png'%}" class="icon_image" style="margin-right: 0"/></a></div>
-    </div>
-<div class="email_div"><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqjCJVMRVmnFTQZSmjQhzgXxNZcrgLLfLHRSwtFvsfqRvLfVJslWchMXrRKTTgzsfDRfZL" target="new"><p class="email">prabhavbenara@gmail.com</p></a> </div>
-</div> -->
+ 
 
 
 
@@ -63,14 +55,22 @@
 </body>
 
 </html>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 
 <script>
-    function sidebar(){
-        document.getElementById("sidebar").style.transform='translate(0)';
-    };
-    function close(){
-        document.getElementById("sidebar").style.transform= "translate(-100%)";
-    };
+   $(document).ready(function(){
+$("#menu").on("click", function(){
+   $("#menu").css("opacity", "0");
+    $("#lgMenu").addClass("enter");
+});
+    $("#exit").on("click", function(){
+       $("#lgMenu").removeClass("enter");
+        $("#menu").css("opacity", "1");
+    });
+});
     
     
 </script>

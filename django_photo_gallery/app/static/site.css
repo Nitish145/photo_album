@@ -19,6 +19,7 @@ body{
       transition: .5s ease;  
       
   }
+  #container{display: none}
   .email{
     font-size: 16px;
     font-family: sans-serif;
@@ -135,10 +136,7 @@ margin: 0
     max-height: 350px;
     transition: .5s}
 
-.mobile_nav{display: none}
-/* #sidebar{display: none} */
-#cancle{display: none}
-.sidebar_content{display: none}
+#container{display: none}
 .image_div{
     display: flex;
     flex-direction: row;
@@ -182,48 +180,33 @@ justify-content: space-between;
 width: 100%;
 margin-bottom: 18.5px;}
 
+
+.scrollmenu{
+  width: 90%;height: 85vh; margin-left:5%;
+}
+.home_container{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.home_images{
+  height: 600px
+}
+
 @media screen and (max-width:768px){
     .nav{
         display: none;
     }
-    .mobile_nav{
-        width: 50px;
-        height: 39px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 10px;
-        z-index: 15;
-        }
-   .bar1{
-    width: 37px;
-    height: 6px;
-    border-radius: 100px;
-    background-color: black;
-   }
+    
+   
    .header{
        margin-top: 20%
    }
-   #sidebar{
-    width: 100%;
-    height: 100vh;
-    background: black;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    left: 0%;
-    /* display: none; */
-    transition: transform 0.5s;
-    transform: translate(-100%);
-    
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-around;
-    align-content: center;
-    /* padding: 50px; */
-    
-   }
+ 
    #album_container{
     display: flex;
     flex-direction: column;
@@ -239,26 +222,133 @@ margin-bottom: 18.5px;}
     flex-direction: column;
     align-items: center;
    }
-   #cancle{
-       font-size: 40px;
-       color: white;
+  #container{display: flex}
+   #menu{
+     
+       transition: all 0.5s;
+       -webkit-transition: all 0.25s;
        position: absolute;
-    right: 34px;
-    top: 10px;
-    z-index: 500;
-    /* display: none; */
-   }
-   .sidebar_content{
+       left: 15px;
+       top: 10px;
        color: white;
-       font-size: 20px;
-       /* display: none */
+       display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    justify-content: space-evenly;
    }
-   .sidebarContent{
+   .bar{
+     width: 100%;
+     height: 5px;
+     background-color: white;
+     opacity: 0.8;
+   }
+   
+   
+   
+   ul{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100%;
     justify-content: center;
+    align-items: center;
    }
+   li{
+     color: white;
+     opacity: 0.8;
+     font-size: 25px;
+     padding-left: 5px
+   }
+   
+  
+ 
+   #lgMenu{
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: -400px;
+       
+       background-color: black;
+      
+       position: fixed;
+       z-index: 11;
+       opacity: 0;
+       transition: all 0.25s;
+       -webkit-transition: all 0.25s;
+       
+   }
+   
+   #exit{
+       position: absolute;
+       right: 10px;
+       padding: 0px;
+       top: -10px;
+       font-size: 4em;
+       color: white;
+       font-weight: 500;
+       cursor: pointer;
+       transition: all 0.25s;
+       -webkit-transition: all 0.25s;
+   }
+   #exit:hover{
+       color:#FF9900;
+   }
+   
+   #lgMenu.enter{
+       opacity: 1;
+       left: 0;
+   }
+   .album_image,.images{max-height: 200px;}
+   .album_card{margin-bottom: 0}
+   .card_content{opacity: .8;}
+
+
+   .scrollmenu{
+    width: 100vw;
+    height: fit-content;
+    margin-top: 80px;
+    margin-left: 0
+   }
+   .image_holder{
+     display: flex;
+     justify-content: center;
+   }
+
+.home_container{
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.social_div{display: none;}
+.home_images{height: auto;
+width: 90%}
+.content_div{width: 100%}
+.comment_section{width: 100%;width: 75%;
+  text-align: end;}
+.comment,.commenter{width: 100%;
+margin: 0}
+.name_caption{width: 75%;}
+h2{
+  letter-spacing: 0;
+}
+.image_holder{width: 100%}
+
+.caption{display: flex;
+  text-align: end;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 }
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -294,7 +384,12 @@ img {vertical-align: middle;}
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  
 }
+#next{
+  position:absolute;right:0%;
+}
+
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -321,23 +416,9 @@ img {vertical-align: middle;}
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 
-.active, .dot:hover {
-  background-color: #717171;
-}
 
-/* Fading animation */
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;

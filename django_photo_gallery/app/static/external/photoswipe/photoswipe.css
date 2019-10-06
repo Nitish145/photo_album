@@ -328,3 +328,50 @@ button:hover {
   background: #333;
   color: #fff;
 }
+.slideshow-container{height: 85vh}
+.mySlides fade{height: 100%}
+.images_holder{
+  display: flex; flex-direction:row ;justify-content: space-around; align-items: center;height: 100%;
+}
+.image{height:600px}
+@media screen and (max-width:768px){
+  .header{opacity: 0.8;}
+  p{opacity: 0.8;}
+  .social_div{display: none;}
+
+  .slideshow-container{
+    width: 100vw;
+    height: fit-content;
+    margin-top: 80px;
+    margin-left: 0
+   }
+   .mySlides fade{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .image_holder{flex-direction: column}
+
+  .content_div{width: 100%}
+.comment_section{width: 100%;width: 75%;
+  text-align: end;}
+.comment,.commenter{width: 100%;
+margin: 0}
+.name_caption{width: 75%;}
+h2{
+  letter-spacing: 0;
+}
+
+.caption{display: flex;
+  text-align: end;}
+.images_div{text-align: center;
+  width: 100%;}
+  .image{width: 90%;
+  height: auto}
+  .images_holder{flex-direction: column}
+  .images_div{    align-items: center;
+    width: 100%;
+    justify-content: center;
+  margin: 0}
+  /* .prev,.next{top: 20%} */
+}

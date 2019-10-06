@@ -132,14 +132,14 @@
                    
 
 
-                    <div class="slideshow-container" style="height: 85vh">
+                    <div class="slideshow-container" >
 
                         {% for item in images %}
-                        <div class="mySlides fade" style="height: 100%">
+                        <div class="mySlides fade" style="height: 100%;display:flex;flex-direction: column" >
                           
-                          <div style="display: flex; flex-direction:row ;justify-content: space-around; align-items: center;height: 100%;">    
-                                <div>
-                                      <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}" height="600px"/>
+                          <div class="images_holder" >    
+                                <div class="images_div" >
+                                      <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}" class="image"/>
                                   </div>
                                  
 
@@ -155,7 +155,7 @@
                                        <div><h2 style="opacity: 0.7">|</h2></div> 
                                        <div class="content_date"><h2 style="opacity: 0.7">{{item.date}}</h2></div>   
                                         </div>
-                                        <div><h2>{{item.caption}}</h2></div>
+                                        <div class="caption"><h2>{{item.caption}}</h2></div>
                                 </div>
 
                             </div>
@@ -165,10 +165,11 @@
                         {% endfor %}
                         
                         
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                       
                         
                         </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                         <br>
                         
                         <!-- <div style="text-align:center; display:flex;justify-content: center; ">

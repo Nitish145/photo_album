@@ -23,29 +23,29 @@
                 </div>
             </div>
         
-            <div class="mobile_nav" onclick="sidebar()">
-                <div class="bar1"></div>
-                <div class="bar1"></div>
-                <div class="bar1"></div>
-            </div>
-            <div id="sidebar"> 
-                <div id="cancle" onclick="close()">X</div>
-                <div class="sidebarContent">
-                <div class="sidebar_content">HOME</div>
-                <div class="sidebar_content">ALBUM</div>
-                <div class="sidebar_content">ABOUT</div>
-                <div class="sidebar_content">BLOG</div>
-                <div class="sidebar_content">CONTACT</div>
+            
+            <div id="container">
+                <div id="menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
-        
+                <div id="lgMenu">
+                  <span id="exit">&times;</span>
+                    <ul>
+                      <a href="home"><li>home</li></a>
+                      <a href="gallery"><li>album</li></a>
+                      <li>about</li>
+                    </ul>
+                </div>
             </div>
            
 
-            <div class="scrollmenu" style="width: 90%;height: 85vh; margin-left:5%;">
+            <div class="scrollmenu">
                    
-                    <div style="display: flex; flex-direction:row;width: 90vw;height:100%;justify-content: space-around; align-items: center">    
-                          <div>
-                                <img src="../../media/albums/animal-photography-animals-blurred-background-1431465.jpg"   height="600px"/>
+                    <div class="home_container">    
+                          <div class="image_holder">
+                                <img src="../../media/albums/animal-photography-animals-blurred-background-1431465.jpg"  class="home_images"/>
                             </div>
                             <div class="content_div">
                                     <div class="comment_section">
@@ -59,11 +59,11 @@
                                            <div><h2 style="opacity: 0.7">|</h2></div> 
                                            <div class="content_date"><h2 style="opacity: 0.7">October</h2></div>   
                                             </div>
-                                            <div><h2>It was a moment pure silence in the midst of forrest this guy studies me for a good 1 minute before releasing he's photogenic and continues to search for food.</h2></div>
+                                            <div class="caption"><h2>It was a moment pure silence in the midst of forrest this guy studies me for a good 1 minute before releasing he's photogenic and continues to search for food.</h2></div>
                                     </div>
     
                                 </div>
-                            <a class="next" href="home" style="position:absolute;right:5%; top:51.3%">&#10095;</a>
+                            <a class="next" href="home" id="next">&#10095;</a>
                         </div>
                         
                   
