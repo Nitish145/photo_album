@@ -372,6 +372,9 @@ h2{
   .images_div{    align-items: center;
     width: 100%;
     justify-content: center;
-  margin: 0}
+  margin: 0;
+height: 88vh;
+margin-top: -35px;
+display: flex;}
   /* .prev,.next{top: 20%} */
 }
