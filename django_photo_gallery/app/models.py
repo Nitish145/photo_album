@@ -38,4 +38,3 @@ class AlbumImage(models.Model):
     slug = models.SlugField(max_length=70, default=uuid.uuid4, editable=False)
 
 
-   

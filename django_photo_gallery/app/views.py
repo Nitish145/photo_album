@@ -39,3 +39,6 @@ class AlbumDetail(DetailView):
 def handler404(request, exception):
     assert isinstance(request, HttpRequest)
     return render(request, 'handler404.html', None, None, 404)
+
+
+

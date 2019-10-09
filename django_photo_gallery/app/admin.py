@@ -59,3 +59,4 @@ class AlbumModelAdmin(admin.ModelAdmin):
 class AlbumImageModelAdmin(admin.ModelAdmin):
     list_display = ('alt', 'album')
     list_filter = ('album', 'created')
+
