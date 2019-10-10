@@ -13,8 +13,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', app.views.home, name='home'),
+    url(r'^$', app.views.about, name='about'),
     url(r'^gallery', app.views.gallery, name='gallery'),
+    # url(r'^about', app.views.about, name='about'),
   
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/icons/favicon.ico', permanent=True)),
     url(r'^(?P<slug>[-\w]+)$', app.views.AlbumDetail.as_view(), name='album'), #app.views.AlbumView.as_view()

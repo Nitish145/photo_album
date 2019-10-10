@@ -9,16 +9,7 @@
 </head>
 
 <body>
-    <div class="nav">
-            <div class="photographer"><a href="/"><h3>PRABHAV BENARA</h3></a></div>
-        <div class="menu">
-            <div class="menu_content" ><a href="/home" >home</a></div>
-            <div class="menu_content" ><a href="gallery">album</a></div>
-            <div class="menu_content" ><a href="#">about</a></div>
-            <!-- <div class="menu_content" ><a href="#">BLOG</a></div>
-            <div class="menu_content" ><a href="#">CONTACT</a></div> -->
-        </div>
-    </div>
+    
 
     <div id="container">
         <div id="menu">
@@ -29,9 +20,10 @@
         <div id="lgMenu">
           <span id="exit">&times;</span>
             <ul>
-              <a href="home"><li>home</li></a>
+             <a href="/"><li>about</li></a>
+              <a href="explore"><li>explore+</li></a>
               <a href="gallery"><li>album</li></a>
-              <li>about</li>
+             
             </ul>
         </div>
     </div>
@@ -43,10 +35,31 @@
     
 
     {% block content %}{% endblock %}
+<div class="footer">
 
+<div style="display:flex;justify-content:flex-end;margin-right:97px">
+                            <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon.png'%}" class="icon_image"/></a></div>
+                            <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/igicon.png'%}" class="icon_image"/></a></div>
+                            <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/inicon.png'%}" class="icon_image" style="margin-right: 0"/></a></div>
+</div>                            
+    <div class="nav">
+            <div class="photographer"><a href="/"><h3>PRABHAV BENARA</h3></a></div>
+        <div class="menu">
+        <div class="menu_content" ><a href="/">about</a></div>
+            <div class="menu_content" ><a href="/explore" >explore+</a></div>
+            <div class="menu_content" ><a href="gallery">albums</a></div>
+            
+            <!-- <div class="menu_content" ><a href="#">BLOG</a></div>
+            <div class="menu_content" ><a href="#">CONTACT</a></div> -->
+        </div>
+         
+                                <div style="display:flex;">
+                            
+                        <div><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqjCJVMRVmnFTQZSmjQhzgXxNZcrgLLfLHRSwtFvsfqRvLfVJslWchMXrRKTTgzsfDRfZL" target="new"><p class="email">prabhavbenara@gmail.com</p></a> </div>
+                        
+    </div>
 
-
-    
+    </div>
 
     <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->

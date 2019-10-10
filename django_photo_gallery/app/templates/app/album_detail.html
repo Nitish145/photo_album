@@ -13,14 +13,6 @@
 
     {% if album.is_visible %}
 
-        
-
-
-
-
-
-
-
             <header class="header">
                 <h1>{{ album.title }}</h1>
             </header>
@@ -29,15 +21,13 @@
                 
 
                 
-                    <div class="row" style="margin: 4%;">
+                    <div class="row" style="margin: 4%;margin-bottom:10%">
                         {% for item in images %}
                     <div style="position: relative" class="image_card">    
                         <a href="javascript:pswpInit({{ forloop.counter0 }});">
                             <img src="{{ item.thumb.url }}"  alt="{{ item.alt }}" class="images" />
                         </a>
-                        <!-- <div class="overlay">
-                            <div>{{item.caption}}</div>
-                        </div> -->
+                      
                     </div>
                         {% endfor %}
                     </div>
@@ -53,11 +43,11 @@
             
 
           
-            <!-- <footer class="date">
+            {% comment %} <footer class="date">
                 Created on <time datetime="{{ album.created|date:"Y-m-d" }}">{{ album.created|date:"d M Y" }}</time>
-                <h6>Tags: {{ album.tags }}</h6>
-            </footer> -->
-            
+                <h6 style="color:white">Tags: {{ album.tags }}</h6>
+            </footer> 
+             {% endcomment %}
             
       
 
@@ -144,10 +134,7 @@
                                  
 
                             <div class="content_div">
-                                <div class="comment_section">
-                                    <div class="comment"><h2 style="font-style: italic">{{item.comment}}</h2></div>
-                                    <div class="commenter"><h2 style="font-style: italic">{{item.commenter}}</h2></div>
-                                </div>
+                               
                                    <div class="name_caption">
                                        <div class="name"><h2 style="font-weight: bold;opacity: 0.7;">{{item.alt}}</h2></div> 
                                         <div class="place_date">  
@@ -156,6 +143,10 @@
                                        <div class="content_date"><h2 style="opacity: 0.7">{{item.date}}</h2></div>   
                                         </div>
                                         <div class="caption"><h2>{{item.caption}}</h2></div>
+                                </div>
+                                 <div class="comment_section">
+                                    <div class="comment"><h2 style="font-style: italic">{{item.comment}}</h2></div>
+                                    <div class="commenter"><h2 style="font-style: italic">{{item.commenter}}</h2></div>
                                 </div>
 
                             </div>
@@ -180,14 +171,7 @@
                           <span class="dot" onclick="currentSlide(5)"></span> 
                         </div>
                          -->
-                         <div class="social_div" style="position: absolute;;bottom:0">
-                                <div class="social_icon_div">
-                            <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon.png'%}" class="icon_image"/></a></div>
-                            <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/igicon.png'%}" class="icon_image"/></a></div>
-                            <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/inicon.png'%}" class="icon_image" style="margin-right: 0"/></a></div>
-                            </div>
-                        <div class="email_div"><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqjCJVMRVmnFTQZSmjQhzgXxNZcrgLLfLHRSwtFvsfqRvLfVJslWchMXrRKTTgzsfDRfZL" target="new"><p class="email">prabhavbenara@gmail.com</p></a> </div>
-                        </div>
+                        
 
    
    

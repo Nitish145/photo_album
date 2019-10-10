@@ -11,6 +11,9 @@ def home (request):
     return render(request,'home.html')
 
 
+def about (request):
+    return render(request,'about.html')
+
 
 def gallery(request):
     list = Album.objects.filter(is_visible=True).order_by('-created')
