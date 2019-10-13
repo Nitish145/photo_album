@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    
-
+   
     <div id="container">
         <div id="menu">
             <div class="bar"></div>
@@ -37,7 +36,7 @@
     {% block content %}{% endblock %}
 <div class="footer">
 
-<div style="display:flex;justify-content:flex-end;margin-right:97px">
+<div  class="mydiv">
                             <div><a href="https://www.facebook.com/anand.kasaudhan" target="new"><img src="{% static 'images/fbicon.png'%}" class="icon_image"/></a></div>
                             <div><a href="https://www.instagram.com/anandkassu/" target="new"><img src="{% static 'images/igicon.png'%}" class="icon_image"/></a></div>
                             <div><a href="https://www.linkedin.com/in/anand-kasaudhan-300158184/" target="new"><img src="{% static 'images/inicon.png'%}" class="icon_image" style="margin-right: 0"/></a></div>
@@ -45,13 +44,13 @@
     <div class="nav">
             <div class="photographer"><a href="/"><h3>PRABHAV BENARA</h3></a></div>
         <div class="menu">
-        <div class="menu_content" ><a href="/">about</a></div>
+            <div class="menu_content" ><a href="/">about</a></div>
             <div class="menu_content" ><a href="/explore" >explore+</a></div>
             <div class="menu_content" ><a href="gallery">albums</a></div>
-            
-            <!-- <div class="menu_content" ><a href="#">BLOG</a></div>
-            <div class="menu_content" ><a href="#">CONTACT</a></div> -->
         </div>
+
+
+        
          
                                 <div style="display:flex;">
                             
@@ -85,5 +84,8 @@ $("#menu").on("click", function(){
     });
 });
     
-    
+
 </script>
+
+
+

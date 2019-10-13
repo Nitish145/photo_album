@@ -75,7 +75,7 @@ a{
     color: #FFFFFF;
     /* opacity: 0.7; */
 }
-.menu_content:hover{opacity: 1;}
+.active,.menu_content:hover{opacity: 1;}
 .active{
     color:#fff;
 }
@@ -110,6 +110,7 @@ margin: 0
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10%;
 }
 .card_content{
     font-size: 25px;
@@ -198,7 +199,7 @@ margin-bottom: 18.5px;}
   height: 600px
 }
 .about_content_div{
-  width: 388px;
+  width: 410px;
 }
 .about_content{
   text-align: left;
@@ -207,6 +208,9 @@ letter-spacing: 4px;
 color: #FFFFFF;
 opacity: 0.5;
 margin: 0
+}
+.mydiv{
+  display:flex;justify-content:flex-end;margin-right:97px
 }
 .about_maindiv{
   display: flex;
@@ -238,6 +242,7 @@ margin: 0
     flex-wrap: wrap;
     align-content: center;
     margin-top: 60px;
+    
    }
    .album_card{
     margin: 0;
