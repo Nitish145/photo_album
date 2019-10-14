@@ -79,7 +79,7 @@ a{
 a:hover{opacity: 1;}
 .icon_image:hover{opacity: 1;}
 .email:hover{opacity: 1;}
-.photographer:hover{opacity: 1;}
+/* .photographer:hover{opacity: 1;} */
 
 .menu_content{
     padding-right: 66px;
