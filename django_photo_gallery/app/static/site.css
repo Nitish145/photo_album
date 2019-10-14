@@ -46,7 +46,7 @@ body{
     margin-right: 25px;
     opacity: 0.5;
 }
-.menu{
+#menu{
     display: flex;
 }
 .social_div{
@@ -73,20 +73,17 @@ body{
 a{
     font-size: 17px;
     color: #FFFFFF;
-    /* opacity: 0.7; */
+    /* opacity: 0.5; */
 }
-.active,.menu_content:hover{opacity: 1;}
-.active{
-    color:#fff;
-}
+.menu_content:hover{opacity: 1;}
+a:hover{opacity: 1;}
 .icon_image:hover{opacity: 1;}
 .email:hover{opacity: 1;}
 .photographer:hover{opacity: 1;}
-a:visited{border-bottom: 1px solid white}
+
 .menu_content{
     padding-right: 66px;
     
-    opacity: 0.5;
     font: Regular 20px/27px Open Sans;
   letter-spacing: 6px;
   color: #FFFFFF;

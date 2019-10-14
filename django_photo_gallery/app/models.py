@@ -22,7 +22,7 @@ class Album(models.Model):
         return self.title
 
 class AlbumImage(models.Model):
-    image = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(1280)], format='JPEG', options={'quality': 70})
+    image = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(1280)], format='JPEG', options={'quality': 90})
     thumb = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 80})
     album = models.ForeignKey('album', on_delete=models.PROTECT)
     alt = models.CharField(max_length=255)

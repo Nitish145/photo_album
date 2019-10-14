@@ -43,21 +43,28 @@
 </div>                            
     <div class="nav">
             <div class="photographer"><a href="/"><h3>PRABHAV BENARA</h3></a></div>
-        <div class="menu">
+
+        <!-- <div id="menu">
             <div class="menu_content" ><a href="/">about</a></div>
             <div class="menu_content" ><a href="/explore" >explore+</a></div>
             <div class="menu_content" ><a href="gallery">albums</a></div>
         </div>
-
-
-        
+         -->
          
-                                <div style="display:flex;">
-                            
-                        <div><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqjCJVMRVmnFTQZSmjQhzgXxNZcrgLLfLHRSwtFvsfqRvLfVJslWchMXrRKTTgzsfDRfZL" target="new"><p class="email">prabhavbenara@gmail.com</p></a> </div>
-                        
-    </div>
 
+         <div class="menu" style="display: flex;">
+          <div class="menu_content"><a class="alink" href="/">Home</a></div>
+          <div class="menu_content"><a class="alink" href="explore">explore+</a></div>
+          <div class="menu_content"><a class="alink" href="gallery">album</a></div>
+         </div > 
+     
+    
+     
+
+        <div style="display:flex;">
+                            
+            <div><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqjCJVMRVmnFTQZSmjQhzgXxNZcrgLLfLHRSwtFvsfqRvLfVJslWchMXrRKTTgzsfDRfZL" target="new"><p class="email">prabhavbenara@gmail.com</p></a> </div>           
+        </div>
     </div>
 
     <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
@@ -82,10 +89,27 @@ $("#menu").on("click", function(){
        $("#lgMenu").removeClass("enter");
         $("#menu").css("opacity", "1");
     });
+   
 });
-    
+jQuery(function($) {
+    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+    $('.menu a').each(function() {
+     if (this.href === path) {
+      $(this).addClass('active');
+     }
+    });
+   });
+
 
 </script>
 
 
 
+<style>
+    .active, a.active,.menu_content.active {
+        color:white;
+        opacity: 1;
+    }
+    .alink{opacity: 0.5;}
+  
+</style>
