@@ -20,10 +20,6 @@
 - virtualenv installed.
 
 
-## Disclaimer
-**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
-
----
 
 ## Minimal Path to Awesome
 
@@ -59,10 +55,3 @@ class AlbumImage(models.Model):
 
 ## Sample data cleanup
 To cleanup the sample data delete the sql lite database and the media folder files. Create new database and run the sample again.
-
-## No validation on the form
-This is sample. I decided to keep it simple and let the validation to be added by you.
-
-## Sharing is Caring
-
-Star if you like it :)
