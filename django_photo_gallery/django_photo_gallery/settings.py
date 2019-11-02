@@ -1,4 +1,4 @@
-import django_heroku
+
 import os
 #import posixpath
 
@@ -147,6 +147,3 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
 )
-
-#Activate Django-Heroku.
-django_heroku.settings(locals())
